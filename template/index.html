@@ -9,12 +9,22 @@
     <meta name="author" content="ItzTas">
     <title>Palindrome checker</title>
     <link rel="stylesheet" href="app.css" type="text/css">
+    <script src="../src/main.js" type="module" defer> </script>
 </head>
 
 <body>
-    <header>
+    <header class="header_welcome">
         <h1>Welcome to the palindrome checker!</h1>
     </header>
+
+    <form action="../src/main.js" class="form_palindrome_checker">
+        <div class="div_checker">
+            <label class="label_checker" for="main_input_checker">Put the text to check here!</label>
+            <input class="input_checker" id="main_input_checker">
+            <button class="button_checker" type="submit">Check!</button>
+        </div>
+        <p class="p_display"></p>
+    </form>
 </body>
 
 </html>
