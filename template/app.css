@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #3498db;
+    /* Azul Primário */
+    --color-secondary: #2ecc71;
+    /* Verde Secundário */
+    --color-background: #ecf0f1;
+    /* Cinza Claro de Fundo */
+    --color-text: #2c3e50;
+    /* Texto Cinza Escuro */
+    --color-accent: #e74c3c;
+    /* Vermelho de Acento */
+    --color-muted: #95a5a6;
+    /* Cinza Suave para Itens Muted */
+    --color-highlight: #f1c40f;
+    /* Amarelo para Destaques */
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+h1 {
+    color: var(--color-text);
+}
