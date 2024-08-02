@@ -1,31 +1,34 @@
 function checkPalidrome(s) {
-    let final = ""
-    let inversed = ""
+    let final = '';
+    let inversed = '';
     for (const letter of s) {
-        if (letter === " ") {
-            continue
+        if (letter === ' ') {
+            continue;
         }
-        inversed = letter + inversed
-        final += letter
+        inversed = letter + inversed;
+        final += letter;
     }
-    return inversed === final
+    return inversed === final;
 }
 
-document.querySelector(".form_palindrome_checker").addEventListener("submit", (event) => {
-    event.preventDefault()
+document
+    .querySelector('.form_palindrome_checker')
+    .addEventListener('submit', (event) => {
+        event.preventDefault();
 
-    const value = document.querySelector(".input_checker").value;
+        const value = document.querySelector('.input_checker').value;
 
-    const pDislpay = document.querySelector(".p_display");
-    if (!value) {
-        pDislpay.textContent = "the input cannot be empty";
-        return;
-    }
+        const pDislpay = document.querySelector('.p_display');
+        if (!value) {
+            pDislpay.textContent = 'the input cannot be empty';
+            return;
+        }
 
-    const ispalindrome = checkPalidrome(value);
+        const ispalindrome = checkPalidrome(value);
 
-    pDislpay.textContent = ispalindrome ? `the text: ${value} is a palindrome!`
-        : `the text: ${value} is not a palindrome!`
+        pDislpay.textContent = ispalindrome
+            ? `the text: ${value} is a palindrome!`
+            : `the text: ${value} is not a palindrome!`;
 
-    document.querySelector(".input_checker").value = "";
-})
+        document.querySelector('.input_checker').value = '';
+    });
